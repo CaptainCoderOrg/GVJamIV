@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicCruiseCatastrophe", "CosmicCruiseCatastrophe\CosmicCruiseCatastrophe.csproj", "{DB71CF46-878B-4003-B64C-30C02585E32D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{4EA7F306-8FB6-4330-B1AC-1D9E4E973916}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CosmicCruiseCatastrphe.Tests", "Tests\CosmicCruiseCatastrphe.Tests\CosmicCruiseCatastrphe.Tests.csproj", "{BC4BE66F-9554-4A40-9A38-27B380AF86AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB71CF46-878B-4003-B64C-30C02585E32D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB71CF46-878B-4003-B64C-30C02585E32D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB71CF46-878B-4003-B64C-30C02585E32D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB71CF46-878B-4003-B64C-30C02585E32D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC4BE66F-9554-4A40-9A38-27B380AF86AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC4BE66F-9554-4A40-9A38-27B380AF86AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC4BE66F-9554-4A40-9A38-27B380AF86AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC4BE66F-9554-4A40-9A38-27B380AF86AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BC4BE66F-9554-4A40-9A38-27B380AF86AB} = {4EA7F306-8FB6-4330-B1AC-1D9E4E973916}
+	EndGlobalSection
+EndGlobal
