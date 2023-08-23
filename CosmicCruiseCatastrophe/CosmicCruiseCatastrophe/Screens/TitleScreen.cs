@@ -3,6 +3,7 @@ namespace CosmicCruiseCatastrophe;
 
 public class TitleScreen : IScreen
 {
+    public string ScreenName => "Gorachan IV";
 
     public Task Display()
     {
@@ -30,7 +31,7 @@ public class TitleScreen : IScreen
                 .Centered()
                 .Color(Color.Orange1)
         );
-        Inputs.GetAnyKeys();
+        Inputs.PressAnyKeys();
         return Task.CompletedTask;
     }
 

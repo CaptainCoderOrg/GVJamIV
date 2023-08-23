@@ -1,12 +1,19 @@
 ﻿using Spectre.Console;
+using Spectre.Console.Rendering;
+
 namespace CosmicCruiseCatastrophe;
 
 public static class Inputs
 {
 
-    public static void GetAnyKeys()
+    public static void PressAnyKeys()
     {
-        AnsiConsole.Write(new Text("Press the Any keys to continue").Centered());
+        // AnsiConsole.MarkupLine()
+        
+        IRenderable markup = new Markup("Press the ANY keys to continue").Centered();
+        // AnsiConsole.Markup(new Markup("Press the ANY keys to continue").Centered());
+        AnsiConsole.Write(markup);
+        AnsiConsole.WriteLine();
         HashSet<char> keys = new HashSet<char>();
         int count = 0;
         while(!keys.ContainsAnyKeys())
@@ -17,9 +24,9 @@ public static class Inputs
                 AnsiConsole.Write("Nope ");
                 keys.Clear();
                 count++;
-                if (count % 10 == 0)
+                if (count % 3 == 0)
                 {
-                    AnsiConsole.WriteLine("The - A N Y - keys!");
+                    AnsiConsole.WriteLine("\nThe - A N Y - keys!");
                 }
             }
             else

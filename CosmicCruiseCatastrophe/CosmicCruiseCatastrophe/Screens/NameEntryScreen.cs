@@ -4,6 +4,8 @@ namespace CosmicCruiseCatastrophe;
 
 public class NameEntryScreen : IScreen
 {
+    public string ScreenName => "Boarding Galactic Cruise Ship";
+
     public async Task Display()
     {
         AnsiConsole.Clear();
@@ -21,7 +23,7 @@ public class NameEntryScreen : IScreen
         do
         {
             GetName();
-        } while (! AnsiConsole.Confirm($"Are you sure your name is {Constants.PlayerName}?", false));
+        } while (!ConfirmName());
         
         AnsiConsole.Clear();
         await IDialogRenderer.Default.Render("""
@@ -31,8 +33,14 @@ public class NameEntryScreen : IScreen
         journey ahead.
         """);
 
-        Inputs.GetAnyKeys();
+        Inputs.PressAnyKeys();
 
+    }
+
+    private bool ConfirmName()
+    {
+        AnsiConsole.MarkupLine($"Your name is {Constants.PlayerName.Colorify()}");
+        return AnsiConsole.Confirm($"Are you sure?", false);
     }
     
     public static void GetName()
@@ -52,6 +60,6 @@ public class NameEntryScreen : IScreen
 
     public IScreen Next()
     {
-        return null;
+        return null!;
     }
 }
